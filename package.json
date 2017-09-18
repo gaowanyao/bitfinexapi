@@ -1,0 +1,27 @@
+{
+  "name": "bitfinexapi",
+  "version": "1.0.0",
+  "description": "bitfinex API",
+  "main": "index.js",
+  "scripts": {
+    "test": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gaowanyao/bitfinexapi.git"
+  },
+  "keywords": [
+    "gcan",
+    "bitfinex",
+    "api"
+  ],
+  "author": "gcan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gaowanyao/bitfinexapi/issues"
+  },
+  "homepage": "https://github.com/gaowanyao/bitfinexapi#readme",
+  "dependencies": {
+    "request": "^2.81.0"
+  }
+}
