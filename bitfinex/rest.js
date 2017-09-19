@@ -3,7 +3,7 @@
 const crypto = require('crypto')
 const request = require('request')
 
-function rest (key, secret, opts = {}) {
+function rest (key, secret, opts) {
   this.url = 'https://api.bitfinex.com'
   this.version = 'v1'
   this.key = key
@@ -45,7 +45,7 @@ rest.prototype.make_request = function (path, params, cb) {
     headers,
     timeout: 15000
   }, (err, response, body) => {
-    let error, result
+    var error, result
     if (err || (response.statusCode !== 200 && response.statusCode !== 400)) {
       return cb(new Error(err != null ? err : response.statusCode))
     }
@@ -77,7 +77,7 @@ rest.prototype.make_public_request = function (path, cb) {
     method: 'GET',
     timeout: 15000
   }, (err, response, body) => {
-    let error, result
+    var error, result
     if (err || (response.statusCode !== 200 && response.statusCode !== 400)) {
       return cb(new Error(err != null ? err : response.statusCode))
     }
@@ -117,7 +117,7 @@ rest.prototype.stats = function (symbol, cb) {
 // };
 
 rest.prototype.fundingbook = function (currency, options, cb) {
-  let err, index, option, query_string, uri, value
+  var err, index, option, query_string, uri, value
   index = 0
   uri = 'lendbook/' + currency
   if (typeof options === 'function') {
@@ -144,7 +144,7 @@ rest.prototype.fundingbook = function (currency, options, cb) {
 }
 
 rest.prototype.orderbook = function (symbol, options, cb) {
-  let err, index, option, query_string, uri, value
+  var err, index, option, query_string, uri, value
   index = 0
   uri = 'book/' + symbol
   if (typeof options === 'function') {
@@ -280,7 +280,7 @@ rest.prototype.claim_position = function (position_id, amount, cb) {
 }
 
 rest.prototype.balance_history = function (currency, options, cb) {
-  let err, option, value
+  var err, option, value
   const params = {
     currency
   }
@@ -301,7 +301,7 @@ rest.prototype.balance_history = function (currency, options, cb) {
 }
 
 rest.prototype.movements = function (currency, options, cb) {
-  let err, option, value
+  var err, option, value
   const params = {
     currency
   }
@@ -322,7 +322,7 @@ rest.prototype.movements = function (currency, options, cb) {
 }
 
 rest.prototype.past_trades = function (symbol, options, cb) {
-  let err, option, value
+  var err, option, value
   const params = {
     symbol
   }

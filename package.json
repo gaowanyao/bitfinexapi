@@ -1,7 +1,7 @@
 {
-  "name": "bitfinexapi",
-  "version": "1.0.0",
-  "description": "bitfinex API",
+  "name": "bitfinexapi-tinycalf",
+  "version": "0.0.1",
+  "description": "bitfinex API by tinycalf",
   "main": "index.js",
   "scripts": {
     "test": "node index.js"
